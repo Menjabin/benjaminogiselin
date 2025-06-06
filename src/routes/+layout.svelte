@@ -14,7 +14,7 @@
 
 	<footer>
 		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
+			Har du spørsmål? Gi oss en lyd på <a href="mailto:haukelid@gmail.com">haukelid@gmail.com</a>
 		</p>
 	</footer>
 </div>

@@ -1,31 +1,18 @@
 <script lang="ts">
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcomeFallback from '$lib/images/svelte-welcome.png';
+	import Countdown from './Countdown.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Benjamin 💞 Iselin</title>
+	<meta name="description" content="Benjamin og Iselin gifter seg!" />
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Welcome" />
-			</picture>
-		</span>
+	<enhanced:img class="background" src="$lib/images/rose.jpg" alt="Background image" />
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+	<h1>Benjamin og Iselin</h1>
+	<p>Gifter seg 28. mars 2026, om</p>
+	<Countdown />
 </section>
 
 <style>
@@ -37,23 +24,14 @@
 		flex: 0.6;
 	}
 
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.background {
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		object-position: center;
+		z-index: -1;
+		pointer-events: none;
 	}
 </style>
