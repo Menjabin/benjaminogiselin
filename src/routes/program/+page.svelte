@@ -6,15 +6,10 @@
 <div class="text-column">
 	<h1>Program</h1>
 
+	<p>Brudeparet jobber hardt for å lage bra program...</p>
+
 	<ul>
-		<li>12:00 - Vielse i Os kirke</li>
-		<li>13:00 - Fotografering av brudeparet. Mat og drikke i Betlehem</li>
-		<li>16:00 - Middag</li>
-		<li>17:00 - Talebolk 1</li>
-		<li>18:00 - Underholdning</li>
-		<li>19:00 - Talebolk 2</li>
-		<li>20:00 - Kaffemat</li>
-		<li>21:00 - Just Dance</li>
-		<li>00:00 - Ferdig</li>
+		<li>12:30 - Vielse i Os kirke</li>
+		<li>13:30 - Fotografering av brudeparet. Mat og drikke i Betlehem</li>
 	</ul>
 </div>

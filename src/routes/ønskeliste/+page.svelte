@@ -1,32 +1,10 @@
 <svelte:head>
-	<title>Meny</title>
+	<title>Ønskeliste</title>
 	<meta name="description" content="Meny" />
 </svelte:head>
 
 <div class="text-column">
-	<h1>Meny</h1>
+	<h1>Ønskeliste</h1>
 
-	<h2>Forrett: Blomkålsuppe</h2>
-	<p>
-		Iselin sin favoritt.
-	</p>
-	<p>
-		Allergener: Laktose.
-	</p>
-
-	<h2>Hovedrett: Kjøtt og fløtegratinerte poteter</h2>
-	<p>
-		Benjamin sin favoritt.
-	</p>
-	<p>
-		Allergener: Laktose.
-	</p>
-
-	<h2>Dessert: Sitronterte</h2>
-	<p>
-		Det blir episk.
-	</p>
-	<p>
-		Allergener: Laktose og sitron.
-	</p>
+	<p>Iselin jobber med å finne ut hva Benjamin ønsker seg til bryllupet.</p>
 </div>

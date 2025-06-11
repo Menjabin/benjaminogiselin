@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-    import Countdown from './Countdown.svelte';
 </script>
 
 <header>
@@ -12,8 +11,8 @@
 			<li aria-current={page.url.pathname === '/program' ? 'page' : undefined}>
 				<a href="/program">Program</a>
 			</li>
-			<li aria-current={page.url.pathname === '/meny' ? 'page' : undefined}>
-				<a href="/meny">Meny</a>
+			<li aria-current={page.url.pathname === '/ønskeliste' ? 'page' : undefined}>
+				<a href="/ønskeliste">Ønskeliste</a>
 			</li>
 			<li aria-current={page.url.pathname === '/bordoversikt' ? 'page' : undefined}>
 				<a href="/bordoversikt">Bordoversikt</a>

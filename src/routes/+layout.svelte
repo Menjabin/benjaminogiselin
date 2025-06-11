@@ -11,12 +11,6 @@
 	<main>
 		{@render children()}
 	</main>
-
-	<footer>
-		<p>
-			Har du spørsmål? Gi oss en lyd på <a href="mailto:haukelid@gmail.com">haukelid@gmail.com</a>
-		</p>
-	</footer>
 </div>
 
 <style>
