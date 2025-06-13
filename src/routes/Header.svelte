@@ -1,74 +1,72 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { onMount } from 'svelte';
+
+	let active = false;
+
+	onMount(() => {
+		const toggleButton = document.querySelector('.toggle-button');
+		toggleButton?.addEventListener('click', () => {
+			active = !active;
+		});
+	});
 </script>
 
 <header>
 	<nav>
-		<ul>
-			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Hjem</a>
-			</li>
-			<li aria-current={page.url.pathname === '/program' ? 'page' : undefined}>
-				<a href="/program">Program</a>
-			</li>
-			<li aria-current={page.url.pathname === '/ønskeliste' ? 'page' : undefined}>
-				<a href="/ønskeliste">Ønskeliste</a>
-			</li>
-			<li aria-current={page.url.pathname === '/bordoversikt' ? 'page' : undefined}>
-				<a href="/bordoversikt">Bordoversikt</a>
-			</li>
-		</ul>
+		<div class="links" class:active="{active}">
+			<ul>
+				<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
+					<a href="/">Hjem</a>
+				</li>
+				<li aria-current={page.url.pathname === '/program' ? 'page' : undefined}>
+					<a href="/program">Program</a>
+				</li>
+				<li aria-current={page.url.pathname === '/onskeliste' ? 'page' : undefined}>
+					<a href="/onskeliste">Ønskeliste</a>
+				</li>
+				<li aria-current={page.url.pathname === '/bordoversikt' ? 'page' : undefined}>
+					<a href="/bordoversikt">Bordoversikt</a>
+				</li>
+			</ul>
+		</div>
+		<div class="site-title">
+			<a href="/">Iselin & Benjamin</a>
+		</div>
+		<div class="toggle-button" class:active="{active}">
+			<i class="fa-solid fa-plus"></i>
+		</div>
 	</nav>
 </header>
 
 <style>
 	header {
-		background-color: none;
 		padding: 1rem;
 	}
 
 	nav {
-		display: flex;
-		justify-content: center;
-		background-color: none;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 
-	ul {
-		position: relative;
+	/** Style navigation links */
+	nav .links {
+		margin: auto;
+	}
+
+	nav .links ul {
 		padding: 0;
-		margin: 0;
-		height: 3em;
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		list-style: none;
-		background: var(--background);
-		background-size: contain;
 	}
 
-	li {
-		position: relative;
-		height: 100%;
+	nav .links ul li[aria-current='page'] {
+		text-decoration: underline;
 	}
 
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
+	nav .links ul li a {
 		padding: 0 0.5rem;
-		color: var(--color-text);
 		font-weight: 700;
 		font-size: 0.8rem;
 		text-transform: uppercase;
@@ -77,7 +75,63 @@
 		transition: color 0.2s linear;
 	}
 
+	.toggle-button {
+		position: absolute;
+		top: 1.6rem;
+		right: 0.9rem;
+		display: none;
+		font-size: 1.2rem;
+	}
+
+	.toggle-button i {
+		transition: transform 0.3s ease-in-out;
+	}
+	
+	.toggle-button.active i {
+		transform: rotate(-45deg);
+	}
+
+	@media (max-width: 1300px) {
+		nav {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		nav .links {
+			display: none;
+			width: 100%;
+			flex-direction: column;
+		}
+
+		nav .links.active {
+			display: block;
+		}
+
+		nav .links ul {
+			margin: 0;
+			flex-direction: column;
+			text-align: right;
+		}
+
+		.toggle-button {
+			display: inline;
+		}
+	}
+
+	/** Style site title */
+	.site-title {
+		margin: auto;
+	}
+
+	.site-title a {
+		font-weight: bolder;
+		font-size: 1.8rem;
+		text-decoration: none;
+		transition: color 0.2s linear;
+	}
+
+	/** Hover effect on all links */
 	a:hover {
-		color: var(--color-theme-1);
+		color: var(--color-theme-2);
 	}
 </style>
