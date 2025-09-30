@@ -22,11 +22,11 @@
 				<li aria-current={page.url.pathname === '/program' ? 'page' : undefined}>
 					<a href="/program">Program</a>
 				</li>
+				<li aria-current={page.url.pathname === '/praktisk' ? 'page' : undefined}>
+					<a href="/praktisk">Praktisk</a>
+				</li>
 				<li aria-current={page.url.pathname === '/onskeliste' ? 'page' : undefined}>
 					<a href="/onskeliste">Ønskeliste</a>
-				</li>
-				<li aria-current={page.url.pathname === '/bordoversikt' ? 'page' : undefined}>
-					<a href="/bordoversikt">Bordoversikt</a>
 				</li>
 			</ul>
 		</div>
@@ -42,6 +42,7 @@
 <style>
 	header {
 		padding: 1rem;
+		background-color: var(--color-bg-2);
 	}
 
 	nav {

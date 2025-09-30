@@ -1,32 +1,39 @@
+<script>
+    import Faq from "../Faq.svelte";
+
+</script>
+
 <svelte:head>
-	<title>Meny</title>
-	<meta name="description" content="Meny" />
+	<title>Praktisk</title>
+	<meta name="description" content="Praktisk" />
 </svelte:head>
 
 <div class="text-column">
-	<h1>Meny</h1>
+	<h1>Praktisk</h1>
 
-	<h2>Forrett: Blomkålsuppe</h2>
-	<p>
-		Iselin sin favoritt.
-	</p>
-	<p>
-		Allergener: Laktose.
-	</p>
+	<h2>Toastmastere</h2>
+	<p>Har du noe du vil bidra med under festen? Ta kontakt med toastmasterne våre!</p>
+	<ul>
+		<li>Anne Berit Fevang: 977 63 159</li>
+		<li>Ingvar Hatletvedt: 991 00 722</li>
+	</ul>
 
-	<h2>Hovedrett: Kjøtt og fløtegratinerte poteter</h2>
-	<p>
-		Benjamin sin favoritt.
-	</p>
-	<p>
-		Allergener: Laktose.
-	</p>
-
-	<h2>Dessert: Sitronterte</h2>
-	<p>
-		Det blir episk.
-	</p>
-	<p>
-		Allergener: Laktose og sitron.
-	</p>
+	<h2>FAQ</h2>
+	<Faq />
 </div>
+
+<style>
+	h1, h2, p, ul {
+		margin: .3rem;
+	}
+
+	ul {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.text-column {
+		width: 90%;
+		padding: 0.3rem;
+	}
+</style>

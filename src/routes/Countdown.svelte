@@ -14,7 +14,7 @@
     }, 1000);
 </script>
 
-<div class="countdown">
+<div class="countdown standout">
     <div class="days"><strong>{days}</strong> dager,</div>
     <div class="hours"><strong>{hours}</strong> timer,</div>
     <div class="minutes"><strong>{minutes}</strong> minutter,</div>

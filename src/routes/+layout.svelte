@@ -1,14 +1,18 @@
 <script lang="ts">
 	import Header from './Header.svelte';
+	import { page } from '$app/state';
 	import '../app.css';
 
 	let { children } = $props();
+	let background = $derived(page.url.pathname === '/'
+		? 'image'
+		: 'color');
 </script>
 
 <div class="app">
 	<Header />
 
-	<main>
+	<main class={background}>
 		{@render children()}
 	</main>
 </div>
@@ -20,6 +24,14 @@
 		min-height: 100vh;
 	}
 
+	main.image {
+		background-color: none;
+	}
+
+	main.color {
+		background-color: var(--color-bg-1);
+	}
+
 	main {
 		flex: 1;
 		display: flex;
@@ -29,23 +41,5 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>

@@ -13,3 +13,9 @@
 		<li>13:30 - Fotografering av brudeparet. Mat og drikke i Betlehem</li>
 	</ul>
 </div>
+
+<style>
+	h1 {
+		margin: 0;
+	}
+</style>
