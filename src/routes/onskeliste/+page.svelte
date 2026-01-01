@@ -10,6 +10,10 @@
 		Kitchn
 	</a>
 
+	<a class="tilbords" target="_blank" href="https://www.tilbords.no/min-side/onskelister/179826/">
+		Tilbords
+	</a>
+
 	<a class="vipps" target="_blank" href="https://qr.vipps.no/wish-list/2a96f888-8679-481b-4c6c-08ddf3c193f3">
 		Vipps
 	</a>
@@ -39,6 +43,11 @@
 	.kitchn {
 		background-color: #000000;
 		color: white;
+	}
+
+	.tilbords {
+		background-color: #ffffff;
+		color: #1d1d1b;
 	}
 
 	.vipps {
