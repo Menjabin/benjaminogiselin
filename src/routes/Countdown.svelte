@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Spring } from 'svelte/motion';
 
-    const endDate = new Date('2026-03-28T12:30:00+02:00');
+    const endDate = new Date('2026-03-28T12:30:00+01:00');
     let diff = endDate.getTime() - new Date().getTime();
 
     $: days    = Math.floor(diff / (1000 * 60 * 60 * 24));
